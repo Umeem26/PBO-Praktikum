@@ -1,15 +1,14 @@
-// File: Cylinder.java
 public class Cylinder extends Circle {
     private double height;
 
     // Constructors
     public Cylinder() {
-        super(); // Memanggil constructor default dari Circle
+        super(); 
         this.height = 1.0;
     }
 
     public Cylinder(double radius, double height) {
-        super(radius); // Memanggil constructor Circle(radius)
+        super(radius);
         this.height = height;
     }
 
@@ -18,23 +17,21 @@ public class Cylinder extends Circle {
         return this.height;
     }
 
-    // Sesuai Task 1.2: Override getArea() untuk menghitung luas permukaan silinder 
+    // Override getArea() 
     @Override
     public double getArea() {
-        // Luas permukaan silinder = 2 * PI * r * h + 2 * luas alas
         return 2 * Math.PI * getRadius() * height + 2 * super.getArea();
     }
 
-    // Sesuai Task 1.2: Perbaikan getVolume() 
+    // Perbaikan getVolume() 
     public double getVolume() {
-        // Volume = luas alas * tinggi. Gunakan getArea() dari superclass.
         return super.getArea() * height;
     }
 
-    // Sesuai Task 1.3: Override toString() [cite: 137]
+    // Override toString() 
     @Override
     public String toString() {
-        return "Cylinder: subclass of " + super.toString() // Memanggil toString() dari Circle 
+        return "Cylinder: subclass of " + super.toString() 
                 + " height=" + height;
     }
 }

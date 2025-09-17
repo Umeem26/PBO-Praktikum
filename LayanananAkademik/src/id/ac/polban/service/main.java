@@ -1,25 +1,32 @@
 package id.ac.polban.service;
 
-import id.ac.polban.model.course;
-import id.ac.polban.model.student;
+import id.ac.polban.model.Course;
+import id.ac.polban.model.Mahasiswa;
+import id.ac.polban.model.MahasiswaBeasiswa;
+import id.ac.polban.service.ReportPrinter; 
 
-public class main {
+public class Main {
     public static void main(String[] args) {
-        student student1 = new student(studentidgenerator.generateNewId(), "Budi Santoso");
-        student student2 = new student(studentidgenerator.generateNewId(), "Citra Lestari");
-        student student3 = new student(studentidgenerator.generateNewId(), "Dewi Anggraini");
+        Mahasiswa mhs1 = new Mahasiswa(StudentIdGenerator.generateNewId(), "Budi Santoso");
+        
+        MahasiswaBeasiswa mhs2_beasiswa = new MahasiswaBeasiswa(
+            StudentIdGenerator.generateNewId(), 
+            "Dewi Anggraini", 
+            "Bidikmisi"
+        );
+        
+        System.out.println("--- DEMO toString() ---");
+        System.out.println(mhs1.toString()); /
+        System.out.println(mhs2_beasiswa.toString()); 
+        System.out.println("-----------------------\n");
 
-        course oopCourse = new course("IF101", "Object-Oriented Programming");
+        // Membuat objek Mata Kuliah
+        Course oopCourse = new Course("IF101", "Object-Oriented Programming");
 
-        oopCourse.addStudent(student1);
-        oopCourse.addStudent(student2);
-        oopCourse.addStudent(student3);
+        oopCourse.addStudent(mhs1);
+        oopCourse.addStudent(mhs2_beasiswa); 
 
-        reportprinter printer = new reportprinter();
-
+        ReportPrinter printer = new ReportPrinter();
         printer.printCourseReport(oopCourse);
-
-        System.out.println("\nMahasiswa berikut masih terdata di sistem:");
-        System.out.println(student1.getName());
     }
 }

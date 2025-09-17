@@ -1,4 +1,3 @@
-// File: TestShape.java
 public class TestShape {
     public static void main(String[] args) {
         Shape shape1 = new Shape("blue", false);
@@ -19,10 +18,9 @@ public class TestShape {
 
         Square square1 = new Square(5.0, "black", false);
         System.out.println("Square 1: " + square1.toString());
-        System.out.println("Area: " + square1.getArea()); // Method dari Rectangle
-        System.out.println("Perimeter: " + square1.getPerimeter()); // Method dari Rectangle
+        System.out.println("Area: " + square1.getArea());
+        System.out.println("Perimeter: " + square1.getPerimeter());
         
-        // Coba ubah salah satu sisi
         square1.setLength(7.0);
         System.out.println("After setLength(7.0), side is: " + square1.getSide());
         System.out.println("New toString(): " + square1.toString());

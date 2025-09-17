@@ -1,27 +1,26 @@
-// File: Circle.java
 public class Circle {
-    // 1. Variabel instance
+    // Variabel instance
     private double radius;
     private String color;
 
     // 2. Constructors
-    public Circle() { // Constructor default
+    public Circle() { 
         this.radius = 1.0;
         this.color = "red";
     }
 
-    public Circle(double radius) { // Constructor dengan radius
+    public Circle(double radius) { 
         this.radius = radius;
         this.color = "red";
     }
     
-    // Constructor yang ditambahkan sesuai Task 1.1 [cite: 69]
+    // Constructor yang ditambahkan
     public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;
     }
 
-    // 3. Getter dan Setter
+    // Getter dan Setter
     public double getRadius() {
         return this.radius;
     }
@@ -30,7 +29,7 @@ public class Circle {
         this.radius = radius;
     }
     
-    // Getter dan Setter untuk color sesuai Task 1.1 [cite: 70]
+    // Getter dan Setter untuk color 
     public String getColor() {
         return this.color;
     }
@@ -39,7 +38,7 @@ public class Circle {
         this.color = color;
     }
 
-    // 4. Method lainnya
+    // Method lainnya
     public double getArea() {
         return radius * radius * Math.PI;
     }
