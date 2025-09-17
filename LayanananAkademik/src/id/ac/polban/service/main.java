@@ -1,32 +1,22 @@
 package id.ac.polban.service;
 
-import id.ac.polban.model.Course;
+import id.ac.polban.model.Dosen;
 import id.ac.polban.model.Mahasiswa;
-import id.ac.polban.model.MahasiswaBeasiswa;
-import id.ac.polban.service.ReportPrinter; 
+import id.ac.polban.model.Orang;
 
 public class Main {
     public static void main(String[] args) {
-        Mahasiswa mhs1 = new Mahasiswa(StudentIdGenerator.generateNewId(), "Budi Santoso");
-        
-        MahasiswaBeasiswa mhs2_beasiswa = new MahasiswaBeasiswa(
-            StudentIdGenerator.generateNewId(), 
-            "Dewi Anggraini", 
-            "Bidikmisi"
-        );
-        
-        System.out.println("--- DEMO toString() ---");
-        System.out.println(mhs1.toString()); /
-        System.out.println(mhs2_beasiswa.toString()); 
-        System.out.println("-----------------------\n");
+        Orang mhs1 = new Mahasiswa("MHS-2024001", "Budi Santoso");
+        Dosen dosen1 = new Dosen("DSN-007", "Dr. Retno Wulandari");
 
-        // Membuat objek Mata Kuliah
-        Course oopCourse = new Course("IF101", "Object-Oriented Programming");
+        System.out.println("--- Demo Polimorfisme dari Abstract Method ---");
+        mhs1.tampilkanProfil();
+        dosen1.tampilkanProfil();
+        System.out.println("------------------------------------------\n");
 
-        oopCourse.addStudent(mhs1);
-        oopCourse.addStudent(mhs2_beasiswa); 
-
-        ReportPrinter printer = new ReportPrinter();
-        printer.printCourseReport(oopCourse);
+        System.out.println("--- Demo Penggunaan Interface IPengajar ---");
+        dosen1.mengajar("Pemrograman Berorientasi Objek");
+        dosen1.memberiNilai((Mahasiswa) mhs1, 90);
+        System.out.println("-----------------------------------------\n");
     }
 }
