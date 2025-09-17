@@ -5,9 +5,6 @@ import id.ac.polban.model.student;
 import java.util.List;
 
 public class reportprinter {
-    
-    // Dependency: Method ini 'menggunakan' (bergantung pada) objek course untuk bekerja.
-    // course tidak disimpan sebagai field di dalam reportprinter.
     public void printCourseReport(course course) {
         System.out.println("=========================================");
         System.out.println("Laporan Mata Kuliah: " + course.getCourseName());

@@ -6,7 +6,6 @@ import java.util.List;
 public class course {
     private String courseName;
     private String courseCode;
-    // Agregasi: course 'memiliki' daftar student, tetapi student bisa ada tanpa course
     private List<student> enrolledStudents;
 
     public course(String courseCode, String courseName) {
