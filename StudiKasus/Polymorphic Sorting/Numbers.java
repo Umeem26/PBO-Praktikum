@@ -8,7 +8,6 @@ public class Numbers
     // then prints them in sorted order.
     public static void main(String[] args)
     {
-        // PERUBAHAN: Menggunakan Integer[] bukan int[]
         Integer[] intList;
         int size;
         Scanner scan = new Scanner(System.in);

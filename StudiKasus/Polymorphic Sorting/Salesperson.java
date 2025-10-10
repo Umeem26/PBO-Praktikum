@@ -26,9 +26,8 @@ public class Salesperson implements Comparable
     {
         Salesperson otherSalesperson = (Salesperson) other;
 
-        // Pertama, bandingkan total penjualan
+        // Pertama, bandingkan total penjualanjava
         if (this.totalSales != otherSalesperson.totalSales) {
-            // Urutan natural (menaik), akan dibalik oleh insertionSort
             return this.totalSales - otherSalesperson.totalSales;
         } else {
             // Jika penjualan sama, bandingkan nama belakang secara terbalik (Z-A)
@@ -36,7 +35,6 @@ public class Salesperson implements Comparable
             if (lastNameCompare != 0) {
                 return lastNameCompare;
             } else {
-                // Jika nama belakang sama, bandingkan nama depan secara terbalik (Z-A)
                 return otherSalesperson.firstName.compareTo(this.firstName);
             }
         }

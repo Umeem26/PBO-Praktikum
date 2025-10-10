@@ -14,7 +14,6 @@ public class Paint
     public double amount (Shape s)
     {
         System.out.println ("Computing amount for " + s);
-        // PERUBAHAN: Menghitung jumlah cat yang dibutuhkan.
         return s.area() / coverage;
     }
 }

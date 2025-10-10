@@ -33,7 +33,6 @@ public class Sorting
         {
             Comparable key = list[index];
             int position = index;
-            // PERUBAHAN: Tanda '<' diubah menjadi '>'
             while (position > 0 && key.compareTo(list[position-1]) > 0)
             {
                 list[position] = list[position-1];

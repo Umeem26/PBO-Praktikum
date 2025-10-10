@@ -37,10 +37,10 @@ public class Commission extends Hourly {
      * Gaji terdiri dari upah per jam ditambah komisi dari penjualan.
      * @return Total gaji karyawan
      */
+    
     @Override
     public double pay() {
-        // Memanggil metode pay() dari kelas induk (Hourly) untuk mendapatkan
-        // gaji berdasarkan jam kerja. Metode ini juga me-reset hoursWorked menjadi 0.
+        // Memanggil metode pay() dari kelas induk (Hourly) 
         double hourlyPayment = super.pay();
         
         // Menghitung komisi
