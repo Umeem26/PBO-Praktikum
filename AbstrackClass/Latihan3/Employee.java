@@ -1,3 +1,5 @@
+package abstrackclass.latihan3;
+
 public class Employee extends Sortable {
     private String name;
     private double salary;
